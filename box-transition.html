@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-transition</title>
+</head>
+<body>
+
+    <style>
+        .parent {
+            background-color: blue;
+            height: 400px;
+            width: 400px;
+
+        }
+
+        .child{
+            background-color: red;
+            height: 50%;
+            width: 50%;
+        }
+
+        .parent:hover .child{
+            background-color: green;
+            transform: translateX(100%);
+             animation: left-to-right 1s ease-in forwards infinite alternate;
+        }
+
+        .container{
+            display: flex;
+        }
+
+        @keyframes left-to-right {
+            0%{
+                transform: translateX(0);
+            }
+
+            30%{
+                transform: translateY(100%);
+                background-color: white;
+            }
+
+            60%{
+                transform: translateX(100%) translateY(100%);
+                background-color: yellow;
+            }
+            
+            100%{
+                transform: translateX(100%);
+                background-color: red;
+            }
+
+            
+
+            
+        }
+    </style>
+
+
+    <div class="continer">
+
+    <div class="parent">
+        <div class="child">
+
+        </div>
+    </div>
+    
+    
+
+    <div class="parent">
+        <div class="child">
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
